@@ -1,0 +1,12 @@
+.card-container {
+    transition: transform 0.3s ease;
+}
+.card-container:hover {
+    transform: scale(1.1);
+}
+
+::ng-deep {
+    .mat-mdc-form-field-subscript-wrapper {
+        display: none;
+    }
+}
