@@ -86,9 +86,11 @@ CREATE TABLE Producto (
     Modelo VARCHAR(50) NOT NULL,
     IdEstadoProducto INT NOT NULL,
     SerieProducto VARCHAR(50) NOT NULL,
-    Precio DECIMAL(18, 2) NOT NULL,
-    FOREIGN KEY (IdCategoria) REFERENCES Categoria(IdCategoria),
-    FOREIGN KEY (IdEstadoProducto) REFERENCES EstadoProducto(IdEstadoProducto)
+    Precio DECIMAL(18 , 2 ) NOT NULL,
+    FOREIGN KEY (IdCategoria)
+        REFERENCES Categoria (IdCategoria),
+    FOREIGN KEY (IdEstadoProducto)
+        REFERENCES EstadoProducto (IdEstadoProducto)
 );
 
 
@@ -236,3 +238,5 @@ CREATE TABLE ServicioRepuesto (
 
 ALTER TABLE Servicio
 ADD COLUMN Valor DECIMAL(18, 2) NULL;
+
+
